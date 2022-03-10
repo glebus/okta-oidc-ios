@@ -70,7 +70,7 @@ class OktaOidcBrowserTask: OktaOidcTask {
         }
     }
     
-    func signOutWithIdToken(idToken: String,
+    func signOutWithIdToken(idToken: String, deviceSecret: String?,
                             callback: @escaping (Void?, OktaOidcError?) -> Void) {
         self.downloadOidcConfiguration() { oidConfig, error in
             guard let oidConfig = oidConfig else {
@@ -85,6 +85,7 @@ class OktaOidcBrowserTask: OktaOidcTask {
 
             let request = OKTEndSessionRequest(configuration: oidConfig,
                                                idTokenHint: idToken,
+                                               deviceSecret: deviceSecret ?? "",
                                                postLogoutRedirectURL: successRedirectURL,
                                                additionalParameters: self.config.additionalParams)
             guard let externalUserAgent = self.externalUserAgent() else {

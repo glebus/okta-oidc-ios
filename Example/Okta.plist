@@ -12,5 +12,7 @@
 	<string>https://{yourOktaDomain}/oauth2/default</string>
 	<key>logoutRedirectUri</key>
 	<string>{scheme}:/logout</string>
+        <key>audience</key>
+        <string>api://default</string>
 </dict>
 </plist>
