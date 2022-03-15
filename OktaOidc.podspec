@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'OktaOidcSSO'
+  s.name             = 'OktaOidc'
   s.version          = '12.11.0'
   s.summary          = 'SDK to easily integrate AppAuth with Okta'
   s.description      = <<-DESC
