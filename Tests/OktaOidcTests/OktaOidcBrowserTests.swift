@@ -38,14 +38,14 @@ class OktaOidcPartialMock: OktaOidc {
         }
     }
 
-    override func signOutWithBrowserTask(_ task: OktaOidcBrowserTask, idToken: String, callback: @escaping ((Error?) -> Void)) {
+    override func signOutWithBrowserTask(_ task: OktaOidcBrowserTask, idToken: String, deviceSecret: String?, callback: @escaping ((Error?) -> Void)) {
         originalBrowserTask = task
         DispatchQueue.main.async {
             let browserTaskIOS = task as! OktaOidcBrowserTaskIOS
             let task = OktaOidcBrowserTaskIOSMock(presenter: browserTaskIOS.presenter,
                                                   config: self.configuration,
                                                   oktaAPI: OktaOidcApiMock())
-            super.signOutWithBrowserTask(task, idToken: idToken, callback: callback)
+            super.signOutWithBrowserTask(task, idToken: idToken, deviceSecret: deviceSecret, callback: callback)
         }
     }
 }

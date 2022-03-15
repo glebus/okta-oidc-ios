@@ -56,7 +56,7 @@ final class OKTTokensAuthMock: OKTAuthState {
             refreshToken: nil,
             codeVerifier: mockAuthResponse.request.codeVerifier,
             deviceSecret: nil,
-            idToken: nil,
+            subjectToken: nil,
             additionalParameters: nil
         )
         
@@ -96,7 +96,7 @@ final class OKTTokensAuthMock: OKTAuthState {
             refreshToken: refreshToken,
             codeVerifier: nil,
             deviceSecret: nil,
-            idToken: nil,
+            subjectToken: nil,
             additionalParameters: nil
         )
         

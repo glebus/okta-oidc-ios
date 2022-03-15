@@ -45,6 +45,10 @@ static NSString *const kTestState = @"State";
  */
 static NSString *const kTestIdTokenHint = @"id-token-hint";
 
+/*! @brief Test value for the @c deviceSecret  property.
+ */
+static NSString *const kDeviceSecret = @"device-secret";
+
 @implementation OKTEndSessionRequestTests
 
 + (OKTEndSessionRequest *)testInstance {
@@ -56,6 +60,7 @@ static NSString *const kTestIdTokenHint = @"id-token-hint";
 
     return [[OKTEndSessionRequest alloc] initWithConfiguration:configuration
                                                idTokenHint:kTestIdTokenHint
+                                                  deviceSecret: kDeviceSecret
                                      postLogoutRedirectURL:[NSURL URLWithString:kTestRedirectURL]
                                                      state:kTestState
                                       additionalParameters:additionalParameters];

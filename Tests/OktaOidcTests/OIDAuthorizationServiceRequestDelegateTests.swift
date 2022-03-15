@@ -81,7 +81,7 @@ private extension OKTAuthorizationServiceRequestDelegateTests {
             refreshToken: nil,
             codeVerifier: nil,
             deviceSecret: nil,
-            idToken: nil,
+            subjectToken: nil,
             additionalParameters: nil
         )
     }

@@ -68,7 +68,7 @@ extension OKTAuthState {
             // Make token request
             OKTAuthorizationService.perform(tokenRequest, delegate: delegate, callback: { tokenResponse, error in
                 guard let tokenResponse = tokenResponse else {
-                    finalize(nil, OktaOidcError.APIError("Authorization Error: \(error?.localizedDescription ?? "No token response.")"))
+                    finalize(nil, OktaOidcError.api(message: "Authorization Error: \(error?.localizedDescription ?? "No token response.")", underlyingError: error))
                     return
                 }
               

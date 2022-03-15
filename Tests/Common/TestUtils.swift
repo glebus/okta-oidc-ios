@@ -61,7 +61,7 @@ struct TestUtils {
                     refreshToken: nil,
                     codeVerifier: nil,
                     deviceSecret: nil,
-                        idToken: nil,
+                   subjectToken: nil,
             additionalParameters: nil
         )
 
