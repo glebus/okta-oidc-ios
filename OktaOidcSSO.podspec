@@ -19,7 +19,7 @@ Integrate your native app with Okta using the AppAuth library.
   end
 
   s.subspec 'Okta' do |okta|
-     okta.dependency 'OktaOidcSSO/AppAuth'
+     okta.dependency 'OktaOidc/AppAuth'
      okta.source_files = 'Sources/OktaOidc/**/*.{h,swift}'
      okta.exclude_files = 'Sources/OktaOidc/Common/Exports.swift'
      okta.ios.deployment_target = '11.0'
